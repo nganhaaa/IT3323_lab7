@@ -1,0 +1,35 @@
+PROGRAM example2;
+VAR n: INTEGER;
+    sum: INTEGER;
+    digit: INTEGER;
+    temp: INTEGER;
+
+BEGIN
+  (* Nhập số nguyên n *)
+  WRITE("Nhap so nguyen n: ");
+  READ(n);
+  
+  (* Khởi tạo tổng = 0 *)
+  sum := 0;
+  temp := n;
+  
+  (* Xử lý trường hợp n âm - lấy giá trị tuyệt đối *)
+  IF temp < 0 THEN
+    temp := 0 - temp;
+  END
+  
+  (* Tính tổng các chữ số *)
+  WHILE temp > 0 DO
+  BEGIN
+    digit := temp - (temp / 10) * 10;  (* Lấy chữ số cuối *)
+    sum := sum + digit;                (* Cộng vào tổng *)
+    temp := temp / 10;                 (* Bỏ chữ số cuối *)
+  END
+  
+  (* In kết quả *)
+  WRITE("Tong cac chu so cua ");
+  WRITE(n);
+  WRITE(" la: ");
+  WRITE(sum);
+  WRITELN;
+END.

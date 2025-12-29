@@ -1,0 +1,29 @@
+PROGRAM example1;
+VAR a, b: INTEGER;
+    sum, diff, prod: INTEGER;
+
+BEGIN
+  (* Nhập giá trị cho a và b *)
+  WRITE("Nhap gia tri a: ");
+  READ(a);
+  WRITE("Nhap gia tri b: ");
+  READ(b);
+  
+  (* Tính tổng *)
+  sum := a + b;
+  WRITE("Tong cua a va b: ");
+  WRITE(sum);
+  WRITELN;
+  
+  (* Tính hiệu *)
+  diff := a - b;
+  WRITE("Hieu cua a va b (a - b): ");
+  WRITE(diff);
+  WRITELN;
+  
+  (* Tính tích *)
+  prod := a * b;
+  WRITE("Tich cua a va b: ");
+  WRITE(prod);
+  WRITELN;
+END.
